@@ -43,7 +43,7 @@ public class BubbleSort {
 	 * elements and iteration continues.
 	 * 
 	 * 
-	 * Not efficient sorting technique for the large set of elements.
+	 * Not efficient sorting technique for the large set of elements..
 	 * 
 	 */
 }
