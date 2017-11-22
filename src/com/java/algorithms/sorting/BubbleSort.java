@@ -7,7 +7,7 @@ package com.java.algorithms.sorting;
  */
 public class BubbleSort {
 
-	public static int[] sort(int array[]){
+	public static int[] bubleSort(int array[]){
 		if(array != null && array.length>1){
 			for(int i=0; i<array.length; i++){
 				for(int j=i+1; j<array.length; j++){
@@ -27,15 +27,20 @@ public class BubbleSort {
 		System.out.print("Before buble sort :: ");
 		for(int i:array)
 			System.out.print(i + " ");
-		array=sort(array);//Calling Sort Method.
+		array=bubleSort(array);//Calling Sort Method.
 		System.out.print("\nAfter buble sort  :: ");
 		for(int i:array)
 			System.out.print(i + " ");
 	}
 	
 	/**
-	 * Bubble Sort :: 
-	 * Time Complexity :: O(n^2)
+	 * :: Bubble Sort :: 
+	 * 
+	 * Time Complexity ::	Best Case :: O(n).
+	 * 					 	Average Case :: O(n^2).
+	 * 						Worst Case :: O(n^2).
+	 * 
+	 * Space Complexity ::  O(1).
 	 * 
 	 * Algorithm :: Bubble sort algorithm will compare each element in 
 	 * the array with the rest of the elements in the same array. If 
@@ -43,7 +48,7 @@ public class BubbleSort {
 	 * elements and iteration continues.
 	 * 
 	 * 
-	 * Not efficient sorting technique for the large set of elements..
+	 * Not efficient sorting technique for the large set of elements.
 	 * 
 	 */
 }
