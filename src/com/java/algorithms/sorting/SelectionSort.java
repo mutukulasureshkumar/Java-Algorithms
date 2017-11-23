@@ -37,9 +37,7 @@ public class SelectionSort {
 	/**
 	 * :: Selection Sort ::
 	 * 
-	 * Time Complexity :: 	Best Case		:: O(n^2) 
-	 * 						Average Case	:: O(n^2) 
-	 * 						Worst Case		:: O(n^2)
+	 * Time Complexity :: Best Case - O(n^2) :: Average Case - O(n^2) :: Worst Case - O(n^2)
 	 * 
 	 * Space Complexity :: O(1).
 	 * 
