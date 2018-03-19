@@ -8,22 +8,33 @@ package com.java.algorithms.sorting;
 public class BubbleSort {
 
 	public static int[] bubleSort(int array[]) {
-		if (array != null && array.length > 1) {
-			for (int i = 0; i < array.length; i++) {
-				for (int j = i + 1; j < array.length; j++) {
-					if (array[i] > array[j]) {
-						int temp = array[i];
-						array[i] = array[j];
-						array[j] = temp;
-					}
+		boolean bestcase_check; 
+		int temp;
+		int count1=0;
+		int count2=0;
+		for (int i = 0; i < array.length - 1; i++) {
+			++count1;
+			bestcase_check = false;
+			for (int j = 0; j < array.length - i - 1; j++) {
+				++count2;
+				if (array[j] > array[j + 1]) {
+					temp = array[j];
+					array[j] = array[j + 1];
+					array[j + 1] = temp;
+					bestcase_check = true;
 				}
 			}
+			if (bestcase_check == false)
+				break;
 		}
+		System.out.println("first iteration count :: "+count1+"\nsecond iteration count :: "+count2);
 		return array;
 	}
 
 	public static void main(String args[]) {
-		int array[] = { 95, 9, 95, 87, 8, 81, 18, 54, 57, 53, 92, 15, 38, 24, 8, 56, 29, 69, 64, 66 };
+		int array[] = { 95, 9, 95, 87, 8, 81, 18, 54, 57, 53, 92, 15, 38, 24, 8, 56, 29, 69, 64, 66, 96, 98, 99, 102 }; //Worst Case
+		//int array[] = {1, 2, 3, 4, 5, 6} //Best Case
+		//int array[] = {1, 2, 3, 2, 4, 7, 5, 8} //Average Case
 		System.out.print("Before buble sort :: ");
 		for (int i : array)
 			System.out.print(i + " ");
